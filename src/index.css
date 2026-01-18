@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+/* CSS */
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Hero Section CSS */
+
+:root {
+  --primary-color: #0192C9;
+}
+
+h1 {
+  color: #ffffff !important;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+}
+
+h5 {
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+}
+
+a {
+  text-decoration: none !important;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+a:hover {
+  text-decoration: none !important;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.site-header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 999;
+  background: transparent;
+  animation: animatedHeader 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+
+.site-header.sticky_header {
+  background: #ffffff;
+  box-shadow: 1px 1px 8px 2px #666;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.site-header.sticky_header .header-navigation li a {
+  color: #111111;
+}
+
+.site-header.sticky_header .navbar-brand.active h3 {
+  color: #111111;
+}
+
+.hero-caption,
+.services,
+.products,
+.contact,
+.sign-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+  z-index: 10;
+}
+
+.hero_section .services,
+.products,
+.contact,
+.sign-up {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero_section {
+  background-image: url(./assets/home-bg.jpg);
+}
+
+.hero_section::before {
+  content: "";
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.header-navigation li a,
+.navbar-brand.active {
+  color: #ffffff;
+}
+
+.header-navigation li a:hover {
+  /* border-bottom: 0.125rem solid #ffffff; */
+  color: #0192C9;
+  transition: unset;
+}
+
+.site-header.sticky_header .header-navigation li a:hover {
+  /* border-bottom: 0.125rem solid #0192C9; */
+  color: #0192C9;
+}
+
+.logoBoldText {
+  color: #0192C9;
+  font-weight: 900;
+}
+
+/* .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+  color: #0192C9 !important;
+}
+.nav-link:focus, .nav-link:hover {
+  color: #0192C9;
+} */
+.header-navigation {
+  padding-top: 1.25rem !important;
+}
+
+.hero-caption p {
+  color: #ffffff;
+}
+
+.site_btn {
+  padding: 0.313rem 0.938rem;
+  border: 0.063rem solid #ffffff;
+  border-radius: 0.188rem;
+  background-color: transparent;
+  color: #ffffff;
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+.site-header.sticky_header .site_btn {
+  border: 0.063rem solid #0192C9;
+  color: #0192C9 !important;
+}
+
+.site-header.sticky_header .site_btn:hover {
+  color: #ffffff !important;
+  background-color: #0192C9;
+  border: 0.063rem solid #0192C9;
+  border-bottom: none;
+}
+
+.header-navigation li:last-child a:hover,
+.site-header.sticky_header .header-navigation li:last-child a:hover {
+  border-bottom: none;
+}
+
+.site_btn:hover {
+  background-color: #ffffff;
+  color: #111111;
+  text-decoration: none;
+}
+
+.card_wrapper .card {
+  border: none;
+  box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+}
+
+/* Footer CSS */
+
+.site_footer {
+  background-color: #111111;
+}
+
+.subscribe_form input {
+  border-radius: 2rem;
+  width: 100%;
+  position: relative;
+  background-color: transparent;
+}
+
+.subscribe_form button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 0 2rem 2rem 0;
+  padding: 0.35rem 1rem;
+}
+
+.subscribe_form {
+  position: relative;
+}
+
+.subscribe_form input:focus {
+  background-color: transparent;
+}
+
+.subscribe_form_caption h2,
+.subscribe_form_caption p {
+  color: #ffffff;
+}
+
+.subscribe_form_caption {
+  margin-bottom: 4rem;
+}
+
+.footer_links a {
+  display: block;
+  color: #ffffff;
+  opacity: 0.6;
+}
+
+.footer_links a:hover {
+  opacity: 1;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.footer_links h5 {
+  color: #ffffff;
+}
+
+.copyright {
+  background-color: #0a0a0a;
+  padding: .75rem 0;
+}
+
+.copyright p,
+.copyright p a {
+  color: #ffffff;
+}
+
+.carditem_link h6 {
+  color: #111111;
+}
+
+.copyright a:hover {
+  color: #0192C9;
+}
+
+.services {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ffffff;
+}
+
+
+/* Responsive CSS */
+
+@media screen and (max-width:768px) {
+  .header-navigation .site_btn {
+    padding: 0.5rem 1rem !important;
+  }
+
+  .copyright p {
+    display: block !important;
+    float: none !important;
+    text-align: center;
+  }
+
+  .subscribe_form button {
+    padding: 0.4rem 1rem;
+  }
+
+}
+
+/* Service Page  */
+
+.services {
+  background-image: url(./assets/service-bg.jpg);
+}
+
+.products {
+  background-image: url(./assets/product-bg.jpg);
+}
+
+.contact {
+  background-image: url(./assets/contact-bg.jpg);
+}
+
+.sign-up {
+  background-image: url(./assets/signup-bg.jpg);
+}
+
+
+/* Responsive */
+
+@media screen and (max-width:767px) {
+
+  .hamburgerMenu button {
+    border-color: #ffffff;
+  }
+
+  .hamburgerMenu button span {
+    color: #ffffff;
+    width: 35px;
+    height: 50px;
+    font-size: 28px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .hamburgerMenu button:focus {
+    box-shadow: none;
+  }
+
+  .main-menu {
+    background-color: #ffffff;
+    margin-left: -25px;
+    margin-right: -25px;
+    padding: 0 15px;
+  }
+
+  .main-menu li a {
+    color: #111111;
+    padding: 10px 0px;
+  }
+
+  .main-menu li .site_btn {
+    border: 1px solid #111111;
+    margin-left: 0;
+  }
+
+  .site-header.sticky_header button {
+    border-color: #111111;
+  }
+
+  .site-header.sticky_header button span {
+    color: #111111;
+  }
+
+  .header-navigation {
+    padding: 15px 0 !important;
+  }
+
+}
