@@ -6,19 +6,23 @@ import Service from './components/pages/Service';
 import Product from './components/pages/Product';
 import Contact from './components/pages/Contact';
 import SignUp from './components/pages/SignUp';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+// import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createHashRouter, RouterProvider } from 'react-router-dom';
 import { Navigate } from 'react-router-dom';
 import Layout from './components/Layout';
 
 function App() {
 
-  const routes = createBrowserRouter([
+  // const routes = createBrowserRouter([
+  const routes = createHashRouter([
     {
       path: '/',
       element: <Layout />,
       children: [
         {
-          path: '/',
+          // path: '/',
+          // element: <Home />
+          index: true,
           element: <Home />
         },
         {
@@ -38,8 +42,10 @@ function App() {
           element: <SignUp />
         },
         {
-          path: '/',
-          element: <Navigate to='/' replace />
+          // path: '/',
+          // element: <Navigate to='/' replace />
+          path: '*',
+          element: <h2>Page Not Found</h2>
         },
       ]
     },
